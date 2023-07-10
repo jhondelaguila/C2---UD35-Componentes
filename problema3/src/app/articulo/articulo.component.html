@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Borrar</th>
+            <th scope="col">Seleccionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let articulo of listaArticulos">
+            <td>{{articulo.codigo}}</td>
+            <td>{{articulo.descripcion}}</td>
+            <td>{{articulo.precio}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="eliminarArticulo(articulo.id)">borrar</button></td>
+            <td><button type="button" class="btn btn-success" (click)="selectArticulo(articulo.id)">seleccionar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
