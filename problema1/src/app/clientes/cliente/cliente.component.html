@@ -1,0 +1,8 @@
+<tr *ngFor="let cliente of listaClientes">
+  <td>{{ cliente.id }}</td>
+  <td>{{ cliente.nombre }}</td>
+  <td>{{ cliente.cif }}</td>
+  <td>{{ cliente.direccion }}</td>
+  <td>{{ cliente.grupo }}</td>
+  <td><button type="button" class="btn btn-danger" (click)="eliminarCliente(cliente.id)">Eliminar</button></td>
+</tr>

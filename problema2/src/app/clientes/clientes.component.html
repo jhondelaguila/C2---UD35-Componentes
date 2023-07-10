@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mensaje</th>
+        <th scope="col">Respuesta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of listaClientes">
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.mensaje}}</td>
+        <td>{{usuario.respuesta}}</td>
+      </tr>
+    </tbody>
+  </table>
