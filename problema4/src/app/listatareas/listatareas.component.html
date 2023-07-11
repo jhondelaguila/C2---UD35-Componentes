@@ -10,11 +10,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button type="button" class="btn btn-danger">borrar</button></td>
+          <tr *ngFor="let tarea of listaTareas">
+            <td>{{tarea.titulo}}</td>
+            <td>{{tarea.descripcion}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="eliminarTarea(tarea.id)">borrar</button></td>
+            <td *ngIf="tarea.completado; else elseBlock"><button type="button" class="btn btn-warning" (click)="tarea.completado = completado(tarea.completado)">no</button></td>
+            <ng-template #elseBlock><td><button type="button" class="btn btn-success" (click)="tarea.completado = completado(tarea.completado)">si</button></td></ng-template>
           </tr>
         </tbody>
       </table>

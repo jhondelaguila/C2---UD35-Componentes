@@ -2,7 +2,7 @@
   <div class="col">
     <div class="mb-3 mt-2">
       <label for="exampleFormControlInput1" class="form-label">Título</label>
-      <input class="form-control" type="text" placeholder="Inserta título" />
+      <input class="form-control" type="text" placeholder="Inserta título" [(ngModel)]="titulo"/>
     </div>
     <div class="mb-3 mt-2">
       <label for="exampleFormControlInput1" class="form-label"
@@ -12,8 +12,10 @@
         class="form-control"
         type="text"
         placeholder="Inserta descripción"
+        [(ngModel)]="descripcion"
       />
     </div>
-    <button type="button" class="btn btn-success">Agregar tarea</button>
+    <button type="button" class="btn btn-success" (click)="agregar()">Agregar tarea</button>
   </div>
 </div>
+<app-listatareas [listaTareas]="tareas" (updatedList)="updateList($event)"></app-listatareas>
