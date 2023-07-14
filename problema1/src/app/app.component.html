@@ -58,8 +58,7 @@
         <td>Grupo</td>
         <td>Opciones</td>
       </tr>
-      <app-cliente [listaClientes]="clientes"></app-cliente>
+      <app-cliente (updatedList)="updateList($event)" [listaClientes]="clientes"></app-cliente>
     </table>
   </div>
 </div>
-<router-outlet></router-outlet>

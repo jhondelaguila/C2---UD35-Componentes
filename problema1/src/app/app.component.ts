@@ -33,4 +33,8 @@ export class AppComponent {
     this.dir = '';
     this.grupo = 'Grupo';
   }
+
+  updateList(list:any){
+    this.clientes = list;
+  }
 }
